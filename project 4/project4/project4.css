@@ -1,0 +1,150 @@
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    display: inline-flex;
+    
+}
+.left-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    overflow-y: auto;
+    z-index: 1000;
+    /* Ensures it stays above other content */
+}
+
+.img-logo img {
+    border-radius: 50%;
+    width: 5rem;
+    height: 6rem;
+}
+
+.logo-name {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.social-logos {
+    margin-top: 20px;
+}
+
+.social-logos a {
+    color: #fff;
+    margin: 5px;
+}
+
+.nav-links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Scroll Behavior */
+body {
+    overflow: hidden;
+    /* Hide the vertical scrollbar */
+}
+
+body.scroll {
+    overflow-y: scroll;
+    /* Show the vertical scrollbar when scrolled */
+}
+
+/* Apply styles for the content area */
+.content {
+    margin-left: 200px;
+    /* Adjust this value based on the width of the left panel */
+    padding: 20px;
+}
+/* Right Panel Styles */
+.right-panel {
+    margin-left: 200px;
+        /* Adjust this value based on the width of the left panel */
+        padding: 7px;
+    background-color: #f4f4f4;
+    color: #333;
+    background-image: url(profile-img.jpg);
+   background-size: cover;
+   
+    background-position: top;
+    
+    width: 200vh ;
+    height: 100vh;
+}
+
+/* Style for heading in the right panel */
+.right-panel h2 {
+    color: #555;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Style for paragraphs in the right panel */
+.right-panel p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Style for lists in the right panel */
+.right-panel ul,
+.right-panel ol {
+    margin-bottom: 15px;
+}
+
+/* Style for links in the right panel */
+.right-panel a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.right-panel a:hover {
+    text-decoration: underline;
+}
+
+/* Style for images in the right panel */
+.right-panel img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}

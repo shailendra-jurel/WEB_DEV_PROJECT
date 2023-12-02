@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 4</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="project4.css">
+    <style>
+        /* Additional styles for the animation */
+        .home-page .right-panel {
+            background-image: url('path/to/your/image.jpg');
+            /* Replace with the actual path to your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .animation-text {
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 24px;
+            font-weight: bold;
+            opacity: 0;
+            /* Initially set opacity to 0 */
+        }
+
+        @keyframes typeAnimation {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blinkCursor {
+            to {
+                border-right-color: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body class="home-page">
+
+    <div class="left-panel">
+        <!-- Left panel content -->
+        <a href="#" onclick="showHomeContent()">Home</a>
+        <a href="#" onclick="showAboutContent()">About</a>
+        <!-- Add other navigation links as needed -->
+    </div>
+
+    <div class="right-panel">
+        <div class="animation-text" id="text1" color="black">Harry</div>
+        <div class="animation-text" id="text2" color="black">I'm Freelancer</div>
+    </div>
+
+    <script>
+        function showHomeContent() {
+            document.getElementById('text1').innerHTML = "New Home Content";
+            document.getElementById('text2').innerHTML = "More Home Content";
+            animateText(document.getElementById('text1'));
+            animateText(document.getElementById('text2'));
+        }
+
+        function showAboutContent() {
+            document.getElementById('text1').innerHTML = "New About Content";
+            document.getElementById('text2').innerHTML = "More About Content";
+            animateText(document.getElementById('text1'));
+            animateText(document.getElementById('text2'));
+        }
+
+        function animateText(element) {
+            element.style.opacity = 1;
+            element.style.animation = 'typeAnimation 2s steps(40, end) forwards, blinkCursor 0.5s infinite alternate';
+        }
+    </script>
+
+    <!-- Rest of your HTML content -->
+
+</body>
+
+</html>
